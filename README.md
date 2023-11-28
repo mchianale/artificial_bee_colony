@@ -43,7 +43,7 @@ There are several ways to implement the algorithm, for example we can define eac
 
 Given that employed bee and onlooker bee update in the same way with only one difference (onlooker bee uses probabilities). We decided to directly implement this update function directly in Food Source. **This function updates in function of greedy selection the current Food Source from a partner Food Source :**
 
-![A screenshot of a computer program Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.006.png)![ref1]
+![A screenshot of a computer program Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.006.png)!
 
 - **Explaination of this function :**
 - **We generate a new food source location :** 
@@ -62,7 +62,7 @@ Given that employed bee and onlooker bee update in the same way with only one di
 - **(\*) : If new\_xi doesn't respect the constraints, there are many ways to pass this issue:**
   - You can create a will loop which stop when x\_new is good, but this is not the best solution if we look to time complexity.
   - Else, it is current to put x\_new to the max value of the objective function if it is greater or to put x\_new to the minimum if it is less. But if you run many iterations, this will increase the chance that each value of each food source it is equal to an extreme value.
-  - So in our code we decided, if x\_new doesn't respect the constraints :![ref1]
+  - So in our code we decided, if x\_new doesn't respect the constraints :!
   - **It allows us to be close to extreme values, but skip flat areas instead of the second option.**
 
 As said previously, this function will be used by employed bees and onlooker bees. So, for scout bees we will use a different function :
@@ -87,14 +87,12 @@ Now, we can implement the final class. This class **computes all the algorithm*
 
 **Employed Phase :**
 
-![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.009.png)![ref1]
-
+![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.009.png)!
 **We go through all the Food Sources, and for each, we apply the function of updateLocation with a partner Food Source, selected randomly and different from the current one. This is abstract, the Food Sources are here rather the employed bees.**
 
 **Onlooker Phase :**
 
-![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.010.png)![ref1]
-
+![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.010.png)!
 - **First we compute the probabilities of each Food Source :  p(Xi) = fit(Xi)/Sum(fit)**
 - **We need to make colony\_size of update,  we consider that we made an update if r is smaller than the probabilitie and apply updateLocation even if greedy selection don't chose the new Food Source.**
 - **So we create a loop for this and increase n\_update if we made an update.** 
