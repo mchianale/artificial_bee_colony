@@ -100,7 +100,7 @@ Now, we can implement the final class. This class **computes all the algorithm*
 
 **Scout Phase :**
 
-![A computer code with text Description automatically generated with medium confidence](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.011.png)
+![A computer code with text Description automatically generated with medium confidence](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.011.png)\
 **During this phase we forced to update randomly Food Source with a trial >= limit.** 
 
 **All Algorithm :**
