@@ -18,9 +18,7 @@ The Rastrigin function is a mathematical function often used to evaluate the per
 
 **Its definition, in dimension n, is :**
 
-![A mathematical equation with numbers and symbols
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.003.png)
+![A mathematical equation with numbers and symbols Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.003.png)
 
 **Where A = 10 and -5.12 <= xi <= 5.12**
 
