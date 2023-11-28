@@ -10,7 +10,7 @@ First I need to define what my objective function is : min <= x1, ...., xdim <= 
 
 ![A screenshot of a computer code
 
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.001.png)
+Description automatically generated](relative%20path/to/images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.001.png)
 
 ![ref1]
 
