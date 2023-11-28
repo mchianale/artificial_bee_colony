@@ -43,7 +43,7 @@ There are several ways to implement the algorithm, for example we can define eac
 
 Given that employed bee and onlooker bee update in the same way with only one difference (onlooker bee uses probabilities). We decided to directly implement this update function directly in Food Source. **This function updates in function of greedy selection the current Food Source from a partner Food Source :**
 
-![A screenshot of a computer program Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.006.png)!
+![A screenshot of a computer program Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.006.png)
 
 - **Explaination of this function :**
 - **We generate a new food source location :** 
@@ -87,12 +87,12 @@ Now, we can implement the final class. This class **computes all the algorithm*
 
 **Employed Phase :**
 
-![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.009.png)!
+![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.009.png)
 **We go through all the Food Sources, and for each, we apply the function of updateLocation with a partner Food Source, selected randomly and different from the current one. This is abstract, the Food Sources are here rather the employed bees.**
 
 **Onlooker Phase :**
 
-![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.010.png)!
+![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.010.png)
 - **First we compute the probabilities of each Food Source :  p(Xi) = fit(Xi)/Sum(fit)**
 - **We need to make colony\_size of update,  we consider that we made an update if r is smaller than the probabilitie and apply updateLocation even if greedy selection don't chose the new Food Source.**
 - **So we create a loop for this and increase n\_update if we made an update.** 
@@ -100,7 +100,8 @@ Now, we can implement the final class. This class **computes all the algorithm*
 
 **Scout Phase :**
 
-![A computer code with text Description automatically generated with medium confidence](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.011.png)**During this phase we forced to update randomly Food Source with a trial >= limit.** 
+![A computer code with text Description automatically generated with medium confidence](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.011.png)
+**During this phase we forced to update randomly Food Source with a trial >= limit.** 
 
 **All Algorithm :**
 
@@ -113,19 +114,19 @@ Now, we can implement the final class. This class **computes all the algorithm*
 
 **Test of ABC on Rastrigin function :**
 
-![A screen shot of a graph Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.013.png)! 
+![A screen shot of a graph Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.013.png) 
 
 We create a new abc instance for this :
 
 ![A white rectangular object with black text Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.014.png)
 
-![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.015.png)! 
+![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.015.png)
 
 **The ABC works well, we find a better solution of the potential value to approach ! (Best one is currently approaching 80.706).**
 
 **Convergence :**
 
-![A white rectangular object with blue lines Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.016.png)!
+![A white rectangular object with blue lines Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.016.png)
 
 **We can see for the same function, ABC converge very quickly to a good fitness value. ABC works well for this function which has many local maxima traps. Because thanks to the scout phase, it allows you to escape from these traps by resetting the food sources.**
 
