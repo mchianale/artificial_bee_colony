@@ -87,7 +87,7 @@ Now, we can implement the final class. This class **computes all the algorithm*
 
 **Employed Phase :**
 
-![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.009.png)
+![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.009.png)\
 **We go through all the Food Sources, and for each, we apply the function of updateLocation with a partner Food Source, selected randomly and different from the current one. This is abstract, the Food Sources are here rather the employed bees.**
 
 **Onlooker Phase :**
