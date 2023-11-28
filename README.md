@@ -8,9 +8,7 @@ We implement the Artificial Bee Colony algorithm for n-dimensional function maxi
 
 First I need to define what my objective function is : min <= x1, ...., xdim <= max : 
 
-![A screenshot of a computer code
-
-Description automatically generated](relative%20path/to/images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.001.png)
+![A screenshot of a computer code Description automatically generated](/images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.001.png)
 
 ![ref1]
 
