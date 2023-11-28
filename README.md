@@ -10,7 +10,7 @@ First I need to define what my objective function is : min <= x1, ...., xdim <= 
 
 ![A screenshot of a computer code Description automatically generated](/images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.001.png)
 
-![ref1]
+
 
 **2. Example Rastrigin function :**
 
@@ -24,9 +24,7 @@ The Rastrigin function is a mathematical function often used to evaluate the per
 
 **Implementation :**
 
-![A computer code with colorful text
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.004.png)
+![A computer code with colorful text Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.004.png)
 
 **3. Implement ABC Algorithm :**
 
@@ -34,9 +32,7 @@ There are several ways to implement the algorithm, for example we can define eac
 
 **Food Source Class**
 
-![ref1]![A close-up of a computer code
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.005.png)
+![A close-up of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.005.png)
 
 **Where :**
 
@@ -47,9 +43,7 @@ Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0
 
 Given that employed bee and onlooker bee update in the same way with only one difference (onlooker bee uses probabilities). We decided to directly implement this update function directly in Food Source. **This function updates in function of greedy selection the current Food Source from a partner Food Source :**
 
-![A screenshot of a computer program
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.006.png)![ref1]
+![A screenshot of a computer program Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.006.png)![ref1]
 
 - **Explaination of this function :**
 - **We generate a new food source location :** 
@@ -74,19 +68,14 @@ Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0
 As said previously, this function will be used by employed bees and onlooker bees. So, for scout bees we will use a different function :
 
 
-![A close-up of a computer screen
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.007.png)
+![A close-up of a computer screen Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.007.png)
 
 We use the same principle that when we create a new Food Source, we just simply generate a random source array.
 
 **ABC Class**
 
-![A computer code with text
+![A computer code with text Description automatically generated with medium confidence](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.008.png)
 
-Description automatically generated with medium confidence](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.008.png)
-
-![ref1]
 
 Now, we can implement the final class. This class **computes all the algorithm**. Its attributs are:
 
@@ -98,17 +87,13 @@ Now, we can implement the final class. This class **computes all the algorithm*
 
 **Employed Phase :**
 
-![A screenshot of a computer code
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.009.png)![ref1]
+![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.009.png)![ref1]
 
 **We go through all the Food Sources, and for each, we apply the function of updateLocation with a partner Food Source, selected randomly and different from the current one. This is abstract, the Food Sources are here rather the employed bees.**
 
 **Onlooker Phase :**
 
-![A screenshot of a computer code
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.010.png)![ref1]
+![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.010.png)![ref1]
 
 - **First we compute the probabilities of each Food Source :  p(Xi) = fit(Xi)/Sum(fit)**
 - **We need to make colony\_size of update,  we consider that we made an update if r is smaller than the probabilitie and apply updateLocation even if greedy selection don't chose the new Food Source.**
@@ -117,45 +102,33 @@ Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0
 
 **Scout Phase :**
 
-![A computer code with text
-
-Description automatically generated with medium confidence](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.011.png)**During this phase we forced to update randomly Food Source with a trial >= limit.** 
+![A computer code with text Description automatically generated with medium confidence](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.011.png)**During this phase we forced to update randomly Food Source with a trial >= limit.** 
 
 **All Algorithm :**
 
 - **In abc.optimize(), we make max\_iter iterations and we apply each previous phases.**
 - **We also need to save the best solution before scout phase, because this phase can replace good solutions with less good ones. We use udpateBest() function :**
 
-![ref1]![A screenshot of a computer program
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.012.png)
+![A screenshot of a computer program Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.012.png)
 
 **At the end we return the best answer to the objective function with the best solution ever find. In the code, we have added different parameters to display some information of the algorithm during its uses.**
 
 **Test of ABC on Rastrigin function :**
 
-![A screen shot of a graph
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.013.png)![ref1]
+![A screen shot of a graph Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.013.png)! 
 
 We create a new abc instance for this :
 
-![A white rectangular object with black text
+![A white rectangular object with black text Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.014.png)
 
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.014.png)
-
-![A screenshot of a computer code
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.015.png)![ref1]
+![A screenshot of a computer code Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.015.png)! 
 
 **The ABC works well, we find a better solution of the potential value to approach ! (Best one is currently approaching 80.706).**
 
 **Convergence :**
 
-![A white rectangular object with blue lines
-
-Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.016.png)![ref1]
+![A white rectangular object with blue lines Description automatically generated](images/Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.016.png)!
 
 **We can see for the same function, ABC converge very quickly to a good fitness value. ABC works well for this function which has many local maxima traps. Because thanks to the scout phase, it allows you to escape from these traps by resetting the food sources.**
 
-[ref1]: Aspose.Words.1614bbb9-004d-41af-87a0-515a80cb8983.002.png
+
